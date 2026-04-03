@@ -43,13 +43,18 @@ class PatientUpdate(BaseModel):
     weight: Annotated[Optional[float], Field(default=None, gt=0)]
 
 
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_FILE = os.path.join(BASE_DIR, 'patients.json')
+
 def load_data():
-    with open('patients.json','r') as f:
-        data=json.load(f)  
+    with open(DATA_FILE, 'r') as f:
+        data = json.load(f)
     return data
 
 def save_data(data):
-    with open('patients.json', 'w') as f:
+    with open(DATA_FILE, 'w') as f:
         json.dump(data, f) 
 
 @app.get("/")
