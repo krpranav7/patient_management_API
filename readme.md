@@ -19,7 +19,7 @@ A RESTful API built with **FastAPI** to manage patient records, including automa
 ## 📦 Installation
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/patient-management-api.git
+git clone https://github.com/krpranav7/patient-management-api.git
 cd patient-management-api
 
 # Create virtual environment
